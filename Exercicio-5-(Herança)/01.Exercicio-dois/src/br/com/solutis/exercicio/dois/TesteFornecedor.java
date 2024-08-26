@@ -2,20 +2,39 @@ package br.com.solutis.exercicio.dois;
 
 public class TesteFornecedor {
     public static void main(String[] args) {
-        Fornecedor fornecedor1 = new Fornecedor("João da Silva", "Rua A, 123", "1234-5678", 1000.0, 200.0);
+        Fornecedor fornecedor1 = new Fornecedor("João", "Rua das Flores, 123", "123456789", 5000.0, 2000.0);
+
 
         System.out.println("Fornecedor 1:");
-        System.out.println("Nome: " + fornecedor1.getNome());
-        System.out.println("Endereço: " + fornecedor1.getEndereco());
-        System.out.println("Telefone: " + fornecedor1.getTelefone());
-        System.out.println("Valor Crédito: " + fornecedor1.getValorCredito());
-        System.out.println("Valor Dívida: " + fornecedor1.getValorDivida());
+        System.out.println(fornecedor1);
+
+        System.out.println("Valor do crédito de Fornecedor 1: " + fornecedor1.getValorCredito());
+
+        System.out.println("Valor da dívida de Fornecedor 1: " + fornecedor1.getValorDivida());
+
+        System.out.println("Saldo de Fornecedor 1: " + fornecedor1.obterSaldo());
+
+        fornecedor1.setValorCredito(6000.0);
+        fornecedor1.setValorDivida(2500.0);
 
 
-        System.out.println("Saldo: " + fornecedor1.obterSaldo());
+        System.out.println("\nFornecedor 1 Atualizado:");
+        System.out.println(fornecedor1);
 
+        Fornecedor fornecedor2 = new Fornecedor();
 
-        System.out.println("Representação do Fornecedor 1: " + fornecedor1.toString());
+        fornecedor2.setNome("Maria");
+        fornecedor2.setEndereco("Avenida Central, 456");
+        fornecedor2.setTelefone("987654321");
+        fornecedor2.setValorCredito(3000.0);
+        fornecedor2.setValorDivida(1500.0);
 
+        System.out.println("\nFornecedor 2:");
+        System.out.println(fornecedor2);
+
+        System.out.println("Valor do crédito de Fornecedor 2: " + fornecedor2.getValorCredito());
+        System.out.println("Valor da dívida de Fornecedor 2: " + fornecedor2.getValorDivida());
+        System.out.println("Saldo de Fornecedor 2: " + fornecedor2.obterSaldo());
     }
+
 }
